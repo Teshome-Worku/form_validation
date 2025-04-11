@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script defer src="day19.js"></script>
+    <style>
+        body {
+            background-color: rgb(87, 52, 49);
+        }
+        
+        .container {
+            margin: 100px auto;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            color: white;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: rgb(30, 20, 20);
+        }
+        
+        .form h2 {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            top: 2px;
+        }
+        
+        .form-control {
+            margin: 25px auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        #text {
+            border-bottom: 0.5px solid wheat;
+            background-color: transparent;
+            margin: 8px 0 5px;
+            font-weight: bold;
+            padding: 5px;
+            color: white;
+        }
+        
+        #password {
+            border-bottom: 0.5px solid white;
+            background-color: transparent;
+            margin: 8px 0 0 0;
+            font-weight: bold;
+            padding: 5px;
+            color: white;
+        }
+        
+        #email {
+            border-bottom: 0.5px solid wheat;
+            background-color: transparent;
+            margin: 8px 0 5px;
+            font-weight: bold;
+            padding: 5px;
+            color: white;
+        }
+        
+        div input[type='submit'] {
+            background-color: rgb(218, 23, 23);
+            width: 100%;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        #div1 {
+            width: 350px;
+            height: 100px;
+            border: 2px solid gray;
+            display: flex;
+            display: none;
+            margin-left: 40%;
+            justify-content: center;
+            align-items: center;
+            color: green;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: grey;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="div1">you're successfully registered!</div>
+    <div class="container">
+        <form action="/" class="form">
+            <h2>Register</h2>
+            <div class="form-control">
+                <label id="all" for="text">Name:</label><br>
+                <input type="text" name="text" id="text" placeholder="Enter name">
+                <div id="error1"></div>
+            </div>
+            <div class="form-control">
+                <label id="all" for="password">Password:</label><br>
+                <input type="password" id="password" placeholder="Enter Password 5-20 char">
+                <div id="error2"></div>
+            </div>
+            <div class="form-control">
+                <label id="all" for="email">Email:</label><br>
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+                <div id="error3"></div>
+            </div>
+            <div>
+                <input type="submit" name="" id="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
